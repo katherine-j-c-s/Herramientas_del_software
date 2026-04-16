@@ -1,6 +1,6 @@
 """Ejercicio 04 — clase FineAnalyzer.
 
-Responsable: Camardelli
+Responsable: Camardelli (Ej. 04 y Punto 07 en feature/camardelli)
 
 CONSIGNA (resumen):
   Clase FineAnalyzer que:

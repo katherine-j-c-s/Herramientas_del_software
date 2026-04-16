@@ -1,6 +1,6 @@
 """Punto 05 — gráficos y exportación.
 
-Responsable: Camardelli
+Responsable: Katherine
 
 CONSIGNA (resumen):
   Responder con un gráfico cada ítem y exportar:

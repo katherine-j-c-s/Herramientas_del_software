@@ -1,6 +1,6 @@
 # Punto 07 — Conclusión sobre el dataset
 
-**Responsable:** Katherine
+**Responsable:** Camardelli
 
 **CONSIGNA (resumen):**
 

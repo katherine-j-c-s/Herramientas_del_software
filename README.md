@@ -1,18 +1,20 @@
 # Urban Flow — Trabajo Práctico Integrador (Sprint 1)
 
-**Rama de trabajo:** `Sprint_1`
+**Git (equipo):** `main` (estable) ← `dev` (integración) ←
+**`feature/<nombre>`** (una rama por persona). El detalle está en la sección
+**Cómo trabajamos nosotros con Git** más abajo.
 
 ## Integrantes
 
-| Quién | Rol en esta base |
-|-------|------------------|
-| **Katherine** | Ejercicio 01, Punto 07, coordinación Git / entrega |
+| Quién | Qué hace |
+|-------|----------|
+| **Katherine** | Ejercicio 01, Punto 05, coordinación Git |
 | **Joaquín** | Ejercicio 02, Punto 06 |
-| **Camardelli** | Ejercicio 04, Punto 05 |
 | **Emi** | Ejercicio 03 |
+| **Camardelli** | Ejercicio 04 (`FineAnalyzer`), Punto 07 (conclusión) |
 
-Cada responsable edita principalmente su archivo en `urban_flow/` (ver tabla
-abajo) y luego integra en el notebook único.
+Cada uno avanza en **su rama** `feature/<nombre>`; los cambios se integran
+primero en **`dev`** y, cuando esté validado, en **`main`**.
 
 ## Archivos por ejercicio
 
@@ -22,9 +24,9 @@ abajo) y luego integra en el notebook único.
 | `urban_flow/ejercicio_02.py` | Ej. 02 — Joaquín |
 | `urban_flow/ejercicio_03.py` | Ej. 03 — Emi |
 | `urban_flow/ejercicio_04.py` | Ej. 04 — Camardelli (`FineAnalyzer`) |
-| `urban_flow/ejercicio_05.py` | Punto 05 — Camardelli (gráficos) |
+| `urban_flow/ejercicio_05.py` | Punto 05 — Katherine (gráficos) |
 | `urban_flow/ejercicio_06.py` | Punto 06 — Joaquín |
-| `urban_flow/ejercicio_07_conclusion.md` | Punto 07 — Katherine (texto) |
+| `urban_flow/ejercicio_07_conclusion.md` | Punto 07 — Camardelli (texto) |
 | `urban_flow/contexto.py` | Rutas y URL del dataset (compartido) |
 | `01_Urban_Flow-Apellidos_Nombres.ipynb` | **Integrador**: imports + llamadas |
 
@@ -105,7 +107,10 @@ Dataset:
 
 ### Ejercicio 01 (1 punto)
 
-Inicialización y versionado. Rama **`Sprint_1`**. Estructura de directorios:
+Inicialización y versionado. El enunciado de la materia menciona la rama
+**`Sprint_1`**; en este grupo las ramas de trabajo siguen el modelo
+**`main` / `dev` / `feature/<nombre>`** (ver README). Estructura de
+directorios:
 
 ```text
 urban_flow/
@@ -182,58 +187,62 @@ en `ejercicio_07_conclusion.md`).
 
 ## Cómo trabajamos nosotros con Git (repos personales)
 
-Objetivo: que **cada uno tenga su propio remoto** para trabajar su ejercicio
-sin pisar al resto, y un **repo grupal** donde se integra la entrega final.
+Objetivo: **cada integrante** trabaja en **su rama** `feature/<nombre>` con
+**todos los ejercicios que le tocan**; eso se integra en **`dev`**, y solo
+cuando el equipo valida **`dev`**, se mergea a **`main`**.
 
-### 1. Repo grupal (oficial)
+### Ramas del equipo
 
-- Un integrante crea el repositorio en GitHub/GitLab (ej. `urban-flow-grupo`).
-- Agrega a los compañeros como colaboradores y a los mails de la cátedra.
-- Rama principal de trabajo: **`Sprint_1`** (o acuerdan `main` + merge a
-  entrega; lo importante es cumplir el enunciado).
+| Rama | Rol |
+|------|-----|
+| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `dev` cuando todos acuerdan. |
+| **`dev`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
+| **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
+| **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
+| **`feature/emi`** | Emi: Ej. 03. |
+| **`feature/camardelli`** | Camardelli: Ej. 04, Punto 07. |
 
-### 2. Fork o clon personal
+Usar **nombres en minúsculas y sin tildes** en el nombre de la rama (convención
+Git). Si preferís `feature/joaquin` sin tilde, está bien.
 
-Cada uno:
+### Flujo de trabajo
 
-- Hace **fork** del repo grupal a su cuenta **o** crea un repo vacío y añade
-  dos remotos:
-  - `origin` → su repo personal.
-  - `grupo` → repo del grupo.
+1. Partir de **`dev`** actualizado:  
+   `git checkout dev` → `git pull`.
+2. Crear o usar la rama personal:  
+   `git checkout -b feature/emi` (ejemplo si aún no existe).
+3. Implementar **todos** los puntos del TP asignados a esa persona en los
+   archivos correspondientes. **No usar `git add .`**; por ejemplo:  
+   `git add urban_flow/ejercicio_03.py`
+4. Subir: `git push -u origin feature/emi`
+5. Abrir **Pull Request** **`feature/<nombre>` → `dev`** (o merge local
+   acordado). Resolver conflictos en el notebook o `CHANGELOG.md` si aparecen.
+6. Cuando **`dev`** esté completo y el notebook pase *Reiniciar y ejecutar
+   todo*, merge **`dev` → `main`**.
 
-Así cada uno puede hacer `push` a **su** `origin` con libertad.
+### Repo grupal y remotos
 
-### 3. Ramas por persona o por ejercicio (recomendado)
+- Un integrante crea el repositorio en GitHub/GitLab y agrega compañeros y
+  cuentas de la cátedra (`lcd-sa182@ugr.edu.ar`, `fpasinato@ugr.edu.ar`).
+- Opcional: **fork** personal o segundo remoto para practicar `push` sin
+  tocar el remoto del grupo; el flujo `main` / `dev` / `feature/<nombre>` es
+  el mismo.
 
-Ejemplos de nombres:
+### Integración y entrega
 
-- `feat/katherine-ej01`
-- `feat/joaquin-ej02`
-- `feat/camardelli-ej04-05`
-- `feat/emi-ej03`
+- **Katherine** (o quien coordine) puede ayudar a revisar PRs hacia `dev` y el
+  merge final `dev` → `main`.
+- Actualizar **`CHANGELOG.md`** al integrar cada merge a `dev` y al cerrar
+  `main`.
+- **Notebook:** un solo `.ipynb`; antes de subir a `main`: **Reiniciar y
+  ejecutar todo**, sin errores intermedios.
 
-Flujo:
+### Enunciado y rama `Sprint_1`
 
-1. Crear rama desde `Sprint_1`.
-2. Implementar solo los archivos acordados (ver tabla de responsables).
-3. Commits pequeños y mensajes claros.
-4. `git push` al **repo personal** (`origin`).
-5. Abrir **Pull Request** al repo grupal hacia `Sprint_1` **o** acordar un día
-   de integración y merge en equipo.
-
-### 4. Integración en el grupo
-
-- **Katherine** (o quien coordine) revisa PRs, resuelve conflictos en el
-  notebook y en `CHANGELOG.md`.
-- **No usar `git add .`:** por ejemplo  
-  `git add urban_flow/ejercicio_02.py README.md`
-- Actualizar **`CHANGELOG.md`** cada vez que se fusiona un ejercicio.
-
-### 5. Notebook integrador
-
-- Un solo `.ipynb` para entrega: cada sección importa el módulo
-  correspondiente.
-- Antes de entregar: **Reiniciar y ejecutar todo**, sin errores intermedios.
+La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. Si en la corrección
+piden esa rama explícita, pueden crear **`Sprint_1`** desde `main` al final
+o preguntar a la cátedra; el modelo operativo del grupo sigue siendo
+**`main` / `dev` / `feature/<nombre>`**.
 
 ---
 

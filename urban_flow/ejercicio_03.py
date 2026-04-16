@@ -23,6 +23,7 @@ LIBRERÍAS SUGERIDAS:
 
 NOTAS:
   - Coordinar con Joaquín la entrada (df o path al raw).
+  - El Ej. 04 (`FineAnalyzer`) lo implementa Camardelli en `ejercicio_04.py`.
 """
 from __future__ import annotations
 

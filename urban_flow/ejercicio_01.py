@@ -3,8 +3,9 @@
 Responsable: Katherine
 
 CONSIGNA (resumen):
-  Inicialización y configuración de la herramienta de versionado. Trabajar
-  sobre la rama "Sprint_1". Crear la estructura:
+  Inicialización y configuración de la herramienta de versionado. La materia
+  menciona la rama "Sprint_1"; en el equipo usamos main / dev /
+  feature/ejercicioN (ver README). Crear la estructura:
 
   urban_flow/
   ├── data/
@@ -24,5 +25,5 @@ from __future__ import annotations
 
 
 def run() -> None:
-  """Implementar: crear carpetas y documentar comandos Git / rama Sprint_1."""
+  """Implementar: crear carpetas y documentar comandos Git (main, dev, features)."""
   pass

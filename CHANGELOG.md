@@ -10,3 +10,16 @@ archivos concretos (sin usar `git add .`).
 - Estructura `urban_flow/` con módulos vacíos por ejercicio, `contexto.py`,
   notebook integrador esqueleto, carpetas de datos con `.gitkeep`.
 - README con consignas, tecnologías y flujo Git con repos personales.
+
+### Actualización — modelo de ramas `main` / `dev` / `feature/ejercicioN`
+
+- Documentado: `main` (estable), `dev` (integración de features), ramas
+  `feature/ejercicio1` … `feature/ejercicio7`; merge a `main` solo tras
+  validar `dev`. Nota sobre `Sprint_1` del enunciado vs. flujo del equipo.
+
+### Actualización — ramas por persona y reparto de tareas
+
+- Ramas: `feature/katherine`, `feature/joaquin`, `feature/emi`,
+  `feature/camardelli`.
+- Reparto: Katherine Ej. 01, Punto 05 y coordinación Git; Joaquín Ej. 02 y
+  Punto 06; Emi Ej. 03; Camardelli Ej. 04 y Punto 07.
