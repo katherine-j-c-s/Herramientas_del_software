@@ -1,6 +1,6 @@
 """Ejercicio 04 — clase FineAnalyzer.
 
-Responsable: Emi
+Responsable: Camardelli
 
 CONSIGNA (resumen):
   Clase FineAnalyzer que:

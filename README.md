@@ -8,8 +8,8 @@
 |-------|------------------|
 | **Katherine** | Ejercicio 01, Punto 07, coordinación Git / entrega |
 | **Joaquín** | Ejercicio 02, Punto 06 |
-| **Camardelli** | Ejercicio 03 |
-| **Emi** | Ejercicio 04, Punto 05 |
+| **Camardelli** | Ejercicio 04, Punto 05 |
+| **Emi** | Ejercicio 03 |
 
 Cada responsable edita principalmente su archivo en `urban_flow/` (ver tabla
 abajo) y luego integra en el notebook único.
@@ -20,9 +20,9 @@ abajo) y luego integra en el notebook único.
 |---------|-----------|
 | `urban_flow/ejercicio_01.py` | Ej. 01 — Katherine |
 | `urban_flow/ejercicio_02.py` | Ej. 02 — Joaquín |
-| `urban_flow/ejercicio_03.py` | Ej. 03 — Camardelli |
-| `urban_flow/ejercicio_04.py` | Ej. 04 — Emi (`FineAnalyzer`) |
-| `urban_flow/ejercicio_05.py` | Punto 05 — Emi (gráficos) |
+| `urban_flow/ejercicio_03.py` | Ej. 03 — Emi |
+| `urban_flow/ejercicio_04.py` | Ej. 04 — Camardelli (`FineAnalyzer`) |
+| `urban_flow/ejercicio_05.py` | Punto 05 — Camardelli (gráficos) |
 | `urban_flow/ejercicio_06.py` | Punto 06 — Joaquín |
 | `urban_flow/ejercicio_07_conclusion.md` | Punto 07 — Katherine (texto) |
 | `urban_flow/contexto.py` | Rutas y URL del dataset (compartido) |
@@ -209,8 +209,8 @@ Ejemplos de nombres:
 
 - `feat/katherine-ej01`
 - `feat/joaquin-ej02`
-- `feat/camardelli-ej03`
-- `feat/emi-ej04-05`
+- `feat/camardelli-ej04-05`
+- `feat/emi-ej03`
 
 Flujo:
 

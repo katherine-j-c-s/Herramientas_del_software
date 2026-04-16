@@ -1,6 +1,6 @@
 """Ejercicio 03 — limpieza con Pandas.
 
-Responsable: Camardelli
+Responsable: Emi
 
 CONSIGNA (resumen):
   - Fechas a formato YYYY-MM-DD; inválidas → 1932-01-01. Mostrar 10 primeras.
