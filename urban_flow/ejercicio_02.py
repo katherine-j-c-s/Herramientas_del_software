@@ -23,17 +23,6 @@ from __future__ import annotations
 from pathlib import Path
 import pandas as pd
 
-_CSV_COLS = [
-  "multa_id",
-  "patente",
-  "fecha",
-  "hora",
-  "velocidad_registrada",
-  "velocidad_maxima",
-  "ubicacion",
-  "radar_id",
-  "estado_multa",
-]
 
 URL = "https://raw.githubusercontent.com/HAD141/datasets/refs/heads/main/TrabajosPracticos/urban_flow/speeding_fines.csv"
 
@@ -59,7 +48,7 @@ def run() -> pd.DataFrame:
   print("\nTipos de datos:")
   print(df_raw.dtypes)
 
-  print("\nValores nulos por columna:")
+  print("\nValores nulos por columna: ")
   print(df_raw.isnull().sum())
 
   return df_raw
