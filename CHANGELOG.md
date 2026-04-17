@@ -11,11 +11,11 @@ archivos concretos (sin usar `git add .`).
   notebook integrador esqueleto, carpetas de datos con `.gitkeep`.
 - README con consignas, tecnologías y flujo Git con repos personales.
 
-### Actualización — modelo de ramas `main` / `dev` / `feature/ejercicioN`
+### Actualización — modelo de ramas `main` / `Sprint_1` / `feature/...`
 
-- Documentado: `main` (estable), `dev` (integración de features), ramas
-  `feature/ejercicio1` … `feature/ejercicio7`; merge a `main` solo tras
-  validar `dev`. Nota sobre `Sprint_1` del enunciado vs. flujo del equipo.
+- Documentado: `main` (estable), **`Sprint_1`** (integración de features),
+  ramas `feature/...` por persona; merge a `main` solo tras validar
+  **`Sprint_1`** (consigna del Ej. 1).
 
 ### Actualización — ramas por persona y reparto de tareas
 
