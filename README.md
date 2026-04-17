@@ -1,8 +1,9 @@
 # Urban Flow — Trabajo Práctico Integrador (Sprint 1)
 
-**Git (equipo):** `main` (estable) ← `dev` (integración) ←
-**`feature/<nombre>`** (una rama por persona). El detalle está en la sección
-**Cómo trabajamos nosotros con Git** más abajo.
+**Git (equipo):** `main` (estable) ← **`Sprint_1`** (integración de features) ←
+**`feature/<nombre>`**. La consigna del Ejercicio 1 pide trabajar sobre
+**`Sprint_1`** para unir el trabajo. Detalle en **Cómo trabajamos con Git**
+más abajo.
 
 ## Integrantes
 
@@ -14,7 +15,7 @@
 | **Camardelli** | Ejercicio 04 (`FineAnalyzer`), Punto 07 (conclusión) |
 
 Cada uno avanza en **su rama** `feature/<nombre>`; los cambios se integran
-primero en **`dev`** y, cuando esté validado, en **`main`**.
+primero en **`Sprint_1`** y, cuando esté validado, en **`main`**.
 
 ## Archivos por ejercicio
 
@@ -109,7 +110,7 @@ Dataset:
 
 Inicialización y versionado. El enunciado de la materia menciona la rama
 **`Sprint_1`**; en este grupo las ramas de trabajo siguen el modelo
-**`main` / `dev` / `feature/<nombre>`** (ver README). Estructura de
+**`main` / `Sprint_1` / `feature/<nombre>`** (ver README). Estructura de
 directorios:
 
 ```text
@@ -188,15 +189,15 @@ en `ejercicio_07_conclusion.md`).
 ## Cómo trabajamos nosotros con Git (repos personales)
 
 Objetivo: **cada integrante** trabaja en **su rama** `feature/<nombre>` con
-**todos los ejercicios que le tocan**; eso se integra en **`dev`**, y solo
-cuando el equipo valida **`dev`**, se mergea a **`main`**.
+**todos los ejercicios que le tocan**; eso se integra en **`Sprint_1`**, y solo
+cuando el equipo valida **`Sprint_1`**, se mergea a **`main`**.
 
 ### Ramas del equipo
 
 | Rama | Rol |
 |------|-----|
-| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `dev` cuando todos acuerdan. |
-| **`dev`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
+| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `Sprint_1` cuando todos acuerdan. |
+| **`Sprint_1`** | Integración: aquí se fusionan las `feature/<nombre>` (es lo que pide la consigna del Ej. 1). |
 | **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
 | **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
 | **`feature/emi`** | Emi: Ej. 03. |
@@ -207,42 +208,40 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 
 ### Flujo de trabajo
 
-1. Partir de **`dev`** actualizado:  
-   `git checkout dev` → `git pull`.
+1. Partir de **`Sprint_1`** actualizado:  
+   `git checkout Sprint_1` → `git pull`.
 2. Crear o usar la rama personal:  
    `git checkout -b feature/emi` (ejemplo si aún no existe).
 3. Implementar **todos** los puntos del TP asignados a esa persona en los
    archivos correspondientes. **No usar `git add .`**; por ejemplo:  
    `git add urban_flow/ejercicio_03.py`
 4. Subir: `git push -u origin feature/emi`
-5. Abrir **Pull Request** **`feature/<nombre>` → `dev`** (o merge local
+5. Abrir **Pull Request** **`feature/<nombre>` → `Sprint_1`** (o merge local
    acordado). Resolver conflictos en el notebook o `CHANGELOG.md` si aparecen.
-6. Cuando **`dev`** esté completo y el notebook pase *Reiniciar y ejecutar
-   todo*, merge **`dev` → `main`**.
+6. Cuando **`Sprint_1`** esté completo y el notebook pase *Reiniciar y ejecutar
+   todo*, merge **`Sprint_1` → `main`**.
 
 ### Repo grupal y remotos
 
 - Un integrante crea el repositorio en GitHub/GitLab y agrega compañeros y
   cuentas de la cátedra (`lcd-sa182@ugr.edu.ar`, `fpasinato@ugr.edu.ar`).
 - Opcional: **fork** personal o segundo remoto para practicar `push` sin
-  tocar el remoto del grupo; el flujo `main` / `dev` / `feature/<nombre>` es
-  el mismo.
+  tocar el remoto del grupo; el flujo `main` / `Sprint_1` / `feature/<nombre>`
+  es el mismo.
 
 ### Integración y entrega
 
-- **Katherine** (o quien coordine) puede ayudar a revisar PRs hacia `dev` y el
-  merge final `dev` → `main`.
-- Actualizar **`CHANGELOG.md`** al integrar cada merge a `dev` y al cerrar
+- **Katherine** (o quien coordine) puede ayudar a revisar PRs hacia `Sprint_1`
+  y el merge final `Sprint_1` → `main`.
+- Actualizar **`CHANGELOG.md`** al integrar cada merge a `Sprint_1` y al cerrar
   `main`.
 - **Notebook:** un solo `.ipynb`; antes de subir a `main`: **Reiniciar y
   ejecutar todo**, sin errores intermedios.
 
-### Enunciado y rama `Sprint_1`
+### Rama `Sprint_1`
 
-La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. Si en la corrección
-piden esa rama explícita, pueden crear **`Sprint_1`** desde `main` al final
-o preguntar a la cátedra; el modelo operativo del grupo sigue siendo
-**`main` / `dev` / `feature/<nombre>`**.
+La consigna del Ejercicio 1 indica trabajar sobre **`Sprint_1`**; las
+**features** se integran ahí y, cuando el equipo valida, se pasa a **`main`**.
 
 ---
 
