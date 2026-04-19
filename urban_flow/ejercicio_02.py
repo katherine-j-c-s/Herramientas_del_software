@@ -20,9 +20,8 @@ NOTAS:
     (retornar DataFrame o imprimir según acuerden).
 """
 from __future__ import annotations
-
+from pathlib import Path
 import pandas as pd
-
 
 _CSV_COLS = [
   "multa_id",
@@ -36,7 +35,31 @@ _CSV_COLS = [
   "estado_multa",
 ]
 
+URL = "https://raw.githubusercontent.com/HAD141/datasets/refs/heads/main/TrabajosPracticos/urban_flow/speeding_fines.csv"
+
+BASE_DIR = Path("urban_flow/data")
+RAW_DIR = BASE_DIR / "raw"
+FILE_PATH = RAW_DIR / "speeding_fines.csv"
 
 def run() -> pd.DataFrame:
   """Implementar descarga, lectura y reportes; devolver df_raw."""
-  return pd.DataFrame(columns=_CSV_COLS)
+  # Crear carpeta si no existe
+  RAW_DIR.mkdir(parents=True, exist_ok=True)
+
+  # Descargar si no existe
+  if not FILE_PATH.exists():
+    df_tmp = pd.read_csv(URL)
+    df_tmp.to_csv(FILE_PATH, index=False)
+
+  df_raw = pd.read_csv(FILE_PATH)
+
+  print("\nPrimeras 5 filas:")
+  print(df_raw.head())
+
+  print("\nTipos de datos:")
+  print(df_raw.dtypes)
+
+  print("\nValores nulos por columna:")
+  print(df_raw.isnull().sum())
+
+  return df_raw

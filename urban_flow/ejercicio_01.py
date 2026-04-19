@@ -3,27 +3,31 @@
 Responsable: Katherine
 
 CONSIGNA (resumen):
-  Inicialización y configuración de la herramienta de versionado. La materia
-  menciona la rama "Sprint_1"; en el equipo usamos main / Sprint_1 /
-  feature/<nombre> (ver README). Crear la estructura:
+  Inicialización y configuración de la herramienta de versionado. Crear la
+  estructura bajo urban_flow/data/ y trabajar sobre la rama Sprint_1.
 
   urban_flow/
   ├── data/
-  │   ├── interim (datasets procesados intermedios; plots dentro)
-  │   ├── processed (datasets finales)
-  │   └── raw (dataset en crudo)
+  │   ├── interim/   (plots dentro: interim/plots/)
+  │   ├── processed/
+  │   └── raw/
 
 LIBRERÍAS SUGERIDAS:
-  pathlib (stdlib), subprocess (stdlib) si automatizan git desde código.
+  pathlib, subprocess (stdlib).
 
 NOTAS:
-  - Agregar variable desactivar_git_push en el notebook (solo vosotros
-    implementáis la lógica que respete esa bandera).
-  - No usar "git add ." en los comandos documentados.
+  - Variable desactivar_git_push va en el notebook si automatizan push.
+  - Evitar git add . en los comandos que documenten.
 """
+
 from __future__ import annotations
+
+import subprocess
+from pathlib import Path
+
+from urban_flow import contexto
 
 
 def run() -> None:
-  """Implementar: crear carpetas y documentar comandos Git (main, Sprint_1, features)."""
+  """Implementar: crear carpetas y documentar comandos Git (main, dev, features)."""
   pass

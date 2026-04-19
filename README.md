@@ -1,8 +1,9 @@
 # Urban Flow — Trabajo Práctico Integrador (Sprint 1)
 
-**Git (equipo):** `main` (estable) ← **`Sprint_1`** (integración) ←
-**`feature/<nombre>`** (una rama por persona). El detalle está en la sección
-**Cómo trabajamos nosotros con Git** más abajo.
+**Git (equipo):** `main` (estable) ← **`Sprint_1`** (integración de features) ←
+**`feature/<nombre>`**. La consigna del Ejercicio 1 pide trabajar sobre
+**`Sprint_1`** para unir el trabajo. Detalle en **Cómo trabajamos con Git**
+más abajo.
 
 ## Integrantes
 
@@ -195,8 +196,8 @@ cuando el equipo valida **`Sprint_1`**, se mergea a **`main`**.
 
 | Rama | Rol |
 |------|-----|
-| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `Sprint_1` cuando todos acuerdan. |
-| **`Sprint_1`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
+| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `dev` cuando todos acuerdan. |
+| **`dev`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
 | **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
 | **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
 | **`feature/emi`** | Emi: Ej. 03. |
@@ -237,11 +238,12 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 - **Notebook:** un solo `.ipynb`; antes de subir a `main`: **Reiniciar y
   ejecutar todo**, sin errores intermedios.
 
-### Enunciado y rama `Sprint_1`
+### Rama `Sprint_1`
 
-La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. En este grupo es
-también la rama donde se integran las **`feature/<nombre>`** antes de pasar a
-**`main`**.
+La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. Si en la corrección
+piden esa rama explícita, pueden crear **`Sprint_1`** desde `main` al final
+o preguntar a la cátedra; el modelo operativo del grupo sigue siendo
+**`main` / `dev` / `feature/<nombre>`**.
 
 ---
 
