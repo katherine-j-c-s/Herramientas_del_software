@@ -196,11 +196,11 @@ cuando el equipo valida **`Sprint_1`**, se mergea a **`main`**.
 
 | Rama | Rol |
 |------|-----|
-| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `dev` cuando todos acuerdan. |
-| **`dev`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
+| **`main`** | Código estable y listo para entrega. Recibe merge desde **`Sprint_1`** cuando el equipo valida. |
+| **`Sprint_1`** | Integración del TP (como pide la consigna): aquí se unen las `feature/<nombre>` antes de pasar a `main`. |
 | **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
 | **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
-| **`feature/emi`** | Emi: Ej. 03. |
+| **`feature/emilce`** | Emi: Ej. 03. |
 | **`feature/camardelli`** | Camardelli: Ej. 04, Punto 07. |
 
 Usar **nombres en minúsculas y sin tildes** en el nombre de la rama (convención
@@ -211,11 +211,11 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 1. Partir de **`Sprint_1`** actualizado:  
    `git checkout Sprint_1` → `git pull`.
 2. Crear o usar la rama personal:  
-   `git checkout -b feature/emi` (ejemplo si aún no existe).
+   `git checkout -b feature/emilce` (ejemplo si aún no existe).
 3. Implementar **todos** los puntos del TP asignados a esa persona en los
    archivos correspondientes. **No usar `git add .`**; por ejemplo:  
    `git add urban_flow/ejercicio_03.py`
-4. Subir: `git push -u origin feature/emi`
+4. Subir: `git push -u origin feature/emilce`
 5. Abrir **Pull Request** **`feature/<nombre>` → `Sprint_1`** (o merge local
    acordado). Resolver conflictos en el notebook o `CHANGELOG.md` si aparecen.
 6. Cuando **`Sprint_1`** esté completo y el notebook pase *Reiniciar y ejecutar
@@ -240,10 +240,11 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 
 ### Rama `Sprint_1`
 
-La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. Si en la corrección
-piden esa rama explícita, pueden crear **`Sprint_1`** desde `main` al final
-o preguntar a la cátedra; el modelo operativo del grupo sigue siendo
-**`main` / `dev` / `feature/<nombre>`**.
+La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. El flujo del equipo es
+**`main` ← `Sprint_1` ← `feature/<nombre>`**: cada integrante trabaja en su
+feature, se integra en **`Sprint_1`**, y solo cuando está validado se mergea a
+**`main`**. Si la cátedra pide comprobar la rama explícita, aseguren de tener
+**`Sprint_1`** creada y actualizada (desde `main` o según indiquen).
 
 ---
 

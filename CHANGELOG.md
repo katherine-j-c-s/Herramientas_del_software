@@ -13,13 +13,12 @@ archivos concretos (sin usar `git add .`).
 
 ### Modelo de ramas — `main` / `Sprint_1` / `feature/<nombre>`
 
-- Documentado: `main` (estable), `dev` (integración de features), ramas
-  `feature/ejercicio1` … `feature/ejercicio7`; merge a `main` solo tras
-  validar `dev`. Nota sobre `Sprint_1` del enunciado vs. flujo del equipo.
+- Documentado: `main` (estable), **`Sprint_1`** (integración según consigna),
+  ramas `feature/<nombre>`; merge a `main` solo tras validar **`Sprint_1`**.
 
 ### Reparto de tareas
 
-- Ramas: `feature/katherine`, `feature/joaquin`, `feature/emi`,
+- Ramas: `feature/katherine`, `feature/joaquin`, `feature/emilce`,
   `feature/camardelli`.
 - Katherine: Ej. 01, Punto 05 y coordinación Git; Joaquín: Ej. 02 y Punto 06;
   Emi: Ej. 03; Camardelli: Ej. 04 y Punto 07.
