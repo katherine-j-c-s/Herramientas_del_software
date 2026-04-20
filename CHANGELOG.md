@@ -13,9 +13,9 @@ archivos concretos (sin usar `git add .`).
 
 ### Modelo de ramas — `main` / `Sprint_1` / `feature/<nombre>`
 
-- `main` (estable), **`Sprint_1`** (integración de features), ramas
-  `feature/...` por persona; merge a `main` cuando **`Sprint_1`** esté
-  validado. Alineado a la consigna del Ejercicio 1.
+- Documentado: `main` (estable), `dev` (integración de features), ramas
+  `feature/ejercicio1` … `feature/ejercicio7`; merge a `main` solo tras
+  validar `dev`. Nota sobre `Sprint_1` del enunciado vs. flujo del equipo.
 
 ### Reparto de tareas
 

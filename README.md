@@ -196,8 +196,8 @@ cuando el equipo valida **`Sprint_1`**, se mergea a **`main`**.
 
 | Rama | Rol |
 |------|-----|
-| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `Sprint_1` cuando todos acuerdan. |
-| **`Sprint_1`** | Integración: aquí se fusionan las `feature/<nombre>` (es lo que pide la consigna del Ej. 1). |
+| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `dev` cuando todos acuerdan. |
+| **`dev`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
 | **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
 | **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
 | **`feature/emi`** | Emi: Ej. 03. |
@@ -240,8 +240,10 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 
 ### Rama `Sprint_1`
 
-La consigna del Ejercicio 1 indica trabajar sobre **`Sprint_1`**; las
-**features** se integran ahí y, cuando el equipo valida, se pasa a **`main`**.
+La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. Si en la corrección
+piden esa rama explícita, pueden crear **`Sprint_1`** desde `main` al final
+o preguntar a la cátedra; el modelo operativo del grupo sigue siendo
+**`main` / `dev` / `feature/<nombre>`**.
 
 ---
 
