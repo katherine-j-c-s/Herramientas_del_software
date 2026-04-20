@@ -1,6 +1,7 @@
 """Rutas y constantes compartidas entre ejercicios.
 
-Completar o ajustar al integrar el flujo de datos entre módulos.
+Usado por varios módulos; ``INTERIM_CSV`` y ``PLOTS_DIR`` son los que usa el
+Punto 05 para leer datos y guardar los ``.jpg``.
 """
 from __future__ import annotations
 
