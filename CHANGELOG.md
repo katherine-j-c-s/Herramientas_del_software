@@ -7,19 +7,18 @@ archivos concretos (sin usar `git add .`).
 
 ### Día 1 — 2026-04-16 — Base del proyecto
 
-- Estructura `urban_flow/` con módulos vacíos por ejercicio, `contexto.py`,
-  notebook integrador esqueleto, carpetas de datos con `.gitkeep`.
-- README con consignas, tecnologías y flujo Git con repos personales.
+- Estructura `urban_flow/` con módulos por ejercicio, `contexto.py`, notebook
+  integrador, carpetas de datos con `.gitkeep`.
+- README con consignas, tecnologías y flujo Git.
 
-### Actualización — modelo de ramas `main` / `dev` / `feature/ejercicioN`
+### Modelo de ramas — `main` / `Sprint_1` / `feature/<nombre>`
 
-- Documentado: `main` (estable), `dev` (integración de features), ramas
-  `feature/ejercicio1` … `feature/ejercicio7`; merge a `main` solo tras
-  validar `dev`. Nota sobre `Sprint_1` del enunciado vs. flujo del equipo.
+- Documentado: `main` (estable), **`Sprint_1`** (integración según consigna),
+  ramas `feature/<nombre>`; merge a `main` solo tras validar **`Sprint_1`**.
 
-### Actualización — ramas por persona y reparto de tareas
+### Reparto de tareas
 
-- Ramas: `feature/katherine`, `feature/joaquin`, `feature/emi`,
+- Ramas: `feature/katherine`, `feature/joaquin`, `feature/emilce`,
   `feature/camardelli`.
-- Reparto: Katherine Ej. 01, Punto 05 y coordinación Git; Joaquín Ej. 02 y
-  Punto 06; Emi Ej. 03; Camardelli Ej. 04 y Punto 07.
+- Katherine: Ej. 01, Punto 05 y coordinación Git; Joaquín: Ej. 02 y Punto 06;
+  Emi: Ej. 03; Camardelli: Ej. 04 y Punto 07.
