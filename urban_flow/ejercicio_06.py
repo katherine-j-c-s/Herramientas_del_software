@@ -19,6 +19,18 @@ from __future__ import annotations
 import pandas as pd
 
 
-def run(df: pd.DataFrame | None = None) -> None:
-  """Implementar cálculos e impresión con el formato pedido."""
-  pass
+def run(df: pd.DataFrame) -> None:
+  """Calcula porcentajes de datos corregidos."""
+
+  total = len(df)
+
+  # Porcentaje fechas inválidas corregidas
+  fechas_invalidas = (df["fecha"] == "1932-01-01").sum()
+  porcentaje_fechas = (fechas_invalidas / total) * 100
+
+  # Porcentaje horas inválidas corregidas
+  horas_invalidas = (df["hora"] == "00:00").sum()
+  porcentaje_horas = (horas_invalidas / total) * 100
+
+  print(f"Porcentaje de fechas inválidas: {porcentaje_fechas:.2f}%")
+  print(f"Porcentaje de horas inválidas: {porcentaje_horas:.2f}%")
