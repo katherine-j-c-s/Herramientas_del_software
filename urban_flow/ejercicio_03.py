@@ -131,7 +131,7 @@ def run(df: pd.DataFrame | None = None) -> pd.DataFrame:
 
 def _limpiar_fecha(value: object) -> str:
   """Convierte fechas inválidas a 1932-01-01 y válidas a YYYY-MM-DD."""
-  parsed = pd.to_datetime(value, errors="coerce", dayfirst=True)
+  parsed = pd.to_datetime(value, errors="coerce", format="mixed")
   if pd.isna(parsed):
     return "1932-01-01"
   return parsed.strftime("%Y-%m-%d")
