@@ -26,27 +26,52 @@ import pandas as pd
 
 
 class FineAnalyzer:
-  """Analizador de multas; reemplazar stubs por la lógica del enunciado."""
+  """Analizador de multas; encapsula el dataset limpio para consultas."""
 
   def __init__(self, data: pd.DataFrame) -> None:
     self._data = data.copy()
 
   def ranking_patentes(self, top: int = 5) -> pd.DataFrame:
     """Top patentes por cantidad de multas."""
-    return pd.DataFrame(columns=["patente", "cantidad"])
+    result = (
+      self._data["patente"]
+      .value_counts(dropna=True)
+      .head(top)
+      .rename_axis("patente")
+      .reset_index(name="cantidad")
+    )
+    result.index = pd.RangeIndex(start=1, stop=len(result) + 1)
+    return result
 
   def ranking_horarios(self, top: int = 5) -> pd.DataFrame:
     """Top horas por cantidad de multas."""
-    return pd.DataFrame(columns=["hora", "cantidad"])
+    result = (
+      self._data["hora"]
+      .value_counts(dropna=True)
+      .head(top)
+      .rename_axis("hora")
+      .reset_index(name="cantidad")
+    )
+    result.index = pd.RangeIndex(start=1, stop=len(result) + 1)
+    return result
 
   def promedio_exceso(self) -> float:
     """Promedio de exceso_velocidad."""
-    return 0.0
+    return float(self._data["exceso_velocidad"].mean(skipna=True))
 
   def promedio_exceso_real(self) -> float:
     """Promedio de exceso_velocidad_real."""
-    return 0.0
+    return float(self._data["exceso_velocidad_real"].mean(skipna=True))
 
   def multas_por_ubicacion(self) -> pd.DataFrame:
     """Conteo por ubicación ordenado alfabéticamente."""
-    return pd.DataFrame(columns=["ubicacion", "cantidad"])
+    result = (
+      self._data["ubicacion"]
+      .value_counts(dropna=True)
+      .rename_axis("ubicacion")
+      .reset_index(name="cantidad")
+      .sort_values(by="ubicacion")
+      .reset_index(drop=True)
+    )
+    result.index = pd.RangeIndex(start=1, stop=len(result) + 1)
+    return result

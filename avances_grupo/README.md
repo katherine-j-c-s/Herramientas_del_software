@@ -1,8 +1,9 @@
 # Urban Flow — Trabajo Práctico Integrador (Sprint 1)
 
-**Git (equipo):** `main` (estable) ← **`Sprint_1`** (integración) ←
-**`feature/<nombre>`** (una rama por persona). El detalle está en la sección
-**Cómo trabajamos nosotros con Git** más abajo.
+**Git (equipo):** `main` (estable) ← **`Sprint_1`** (integración de features) ←
+**`feature/<nombre>`**. La consigna del Ejercicio 1 pide trabajar sobre
+**`Sprint_1`** para unir el trabajo. Detalle en **Cómo trabajamos con Git**
+más abajo.
 
 ## Integrantes
 
@@ -195,11 +196,11 @@ cuando el equipo valida **`Sprint_1`**, se mergea a **`main`**.
 
 | Rama | Rol |
 |------|-----|
-| **`main`** | Código estable y listo para entrega. Solo recibe merge desde `Sprint_1` cuando todos acuerdan. |
-| **`Sprint_1`** | Integración: aquí se fusionan las ramas personales cuando hay algo listo para probar en conjunto. |
+| **`main`** | Código estable y listo para entrega. Recibe merge desde **`Sprint_1`** cuando el equipo valida. |
+| **`Sprint_1`** | Integración del TP (como pide la consigna): aquí se unen las `feature/<nombre>` antes de pasar a `main`. |
 | **`feature/katherine`** | Katherine: Ej. 01, Punto 05. |
 | **`feature/joaquin`** | Joaquín: Ej. 02, Punto 06. |
-| **`feature/emi`** | Emi: Ej. 03. |
+| **`feature/emilce`** | Emi: Ej. 03. |
 | **`feature/camardelli`** | Camardelli: Ej. 04, Punto 07. |
 
 Usar **nombres en minúsculas y sin tildes** en el nombre de la rama (convención
@@ -210,11 +211,11 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 1. Partir de **`Sprint_1`** actualizado:  
    `git checkout Sprint_1` → `git pull`.
 2. Crear o usar la rama personal:  
-   `git checkout -b feature/emi` (ejemplo si aún no existe).
+   `git checkout -b feature/emilce` (ejemplo si aún no existe).
 3. Implementar **todos** los puntos del TP asignados a esa persona en los
    archivos correspondientes. **No usar `git add .`**; por ejemplo:  
    `git add urban_flow/ejercicio_03.py`
-4. Subir: `git push -u origin feature/emi`
+4. Subir: `git push -u origin feature/emilce`
 5. Abrir **Pull Request** **`feature/<nombre>` → `Sprint_1`** (o merge local
    acordado). Resolver conflictos en el notebook o `CHANGELOG.md` si aparecen.
 6. Cuando **`Sprint_1`** esté completo y el notebook pase *Reiniciar y ejecutar
@@ -237,11 +238,13 @@ Git). Si preferís `feature/joaquin` sin tilde, está bien.
 - **Notebook:** un solo `.ipynb`; antes de subir a `main`: **Reiniciar y
   ejecutar todo**, sin errores intermedios.
 
-### Enunciado y rama `Sprint_1`
+### Rama `Sprint_1`
 
-La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. En este grupo es
-también la rama donde se integran las **`feature/<nombre>`** antes de pasar a
-**`main`**.
+La consigna del Ejercicio 01 cita la rama **`Sprint_1`**. El flujo del equipo es
+**`main` ← `Sprint_1` ← `feature/<nombre>`**: cada integrante trabaja en su
+feature, se integra en **`Sprint_1`**, y solo cuando está validado se mergea a
+**`main`**. Si la cátedra pide comprobar la rama explícita, aseguren de tener
+**`Sprint_1`** creada y actualizada (desde `main` o según indiquen).
 
 ---
 
